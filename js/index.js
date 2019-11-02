@@ -43,7 +43,87 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // nav
 
-const navigation = document.getElementsByTagNameNS ('nav');
+let navigation = document.querySelectorAll ('a');
+
+navigation[0].textContent=siteContent['nav']['nav-item-1'];
+navigation[1].textContent=siteContent['nav']['nav-item-2'];
+navigation[2].textContent=siteContent['nav']['nav-item-3'];
+navigation[3].textContent=siteContent['nav']['nav-item-4'];
+navigation[4].textContent=siteContent['nav']['nav-item-5'];
+navigation[5].textContent=siteContent['nav']['nav-item-6'];
+
+
+navigation.forEach((greenColor) => {
+  return greenColor.style.color= "green"
+});
+
+// cta
+
+let h1 = document.querySelector("h1");
+h1.textContent = siteContent['cta']['h1'];
+
+let button = document.querySelector('button');
+button.textContent = siteContent['cta']['button'];
+
+let headerImg = document.getElementById('cta-img');
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+// main-content
+
+let h4  = document.querySelectorAll('h4');
+
+h4[0].textContent= siteContent['main-content']['features-h4'];
+h4[1].textContent= siteContent['main-content']['about-h4'];
+h4[2].textContent= siteContent['main-content']['services-h4'];
+h4[3].textContent= siteContent['main-content']['product-h4'];
+h4[4].textContent=siteContent['main-content']['vision-h4'];
+
+let midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']["middle-img-src"])
+
+
+let p = document.querySelectorAll('p');
+
+p[0].textContent=siteContent['main-content']['features-content'];
+p[1].textContent=siteContent['main-content']['about-content'];
+p[2].textContent=siteContent['main-content']['services-content'];
+p[3].textContent=siteContent['main-content']['product-content'];
+p[4].textContent=siteContent['main-content']['vision-content'];
+
+// contact
+
+let contactH4 = document.querySelector('h4');
+h4[5].textContent=siteContent['contact']['contact-h4'];
+
+let contactP = document.querySelectorAll('p');
+p[5].textContent=siteContent['contact']['address'];
+p[6].textContent=siteContent['contact']['phone'];
+p[7].textContent=siteContent['contact']['email'];
+
+// footer
+
+let footer = document.querySelector('p');
+p[8].textContent=siteContent['footer']['copyright'];
+
+// appendChild 
+
+let navAppend = document.createElement('a');
+
+navAppend.textContent = 'Social-Media';
+navAppend.style.color = 'green';
+
+let nav = document.querySelector('nav');
+nav.appendChild(navAppend);
+
+//Prepend
+
+let navPrepend = document.createElement('a');
+
+navPrepend.textContent = 'Home';
+navPrepend.style.color= "green";
+
+nav.prepend(navPrepend);
+
 
 
 
